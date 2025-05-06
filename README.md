@@ -30,13 +30,13 @@ This project can serve as a backbone for token bridges, NFT cross-minting, messa
 
 ## 📦 Tech Stack
 
-| Layer         | Tool / Crate      |
-|---------------|------------------|
-| Language      | Rust 🦀          |
-| Async Runtime | Tokio            |
-| Ethereum      | [`ethers-rs`](https://docs.rs/ethers) |
+| Layer         | Tool / Crate                                              |
+| ------------- | --------------------------------------------------------- |
+| Language      | Rust 🦀                                                   |
+| Async Runtime | Tokio                                                     |
+| Ethereum      | [`ethers-rs`](https://docs.rs/ethers)                     |
 | Storage       | [`sled`](https://github.com/spacejam/sled) (or pluggable) |
-| Deployment    | Docker, `.env`   |
+| Deployment    | Docker, `.env`                                            |
 
 ---
 
@@ -48,9 +48,9 @@ This project can serve as a backbone for token bridges, NFT cross-minting, messa
 git clone https://github.com/your-org/rust-bridge-relayer.git
 cd rust-bridge-relayer
 cargo build --release
+```
 
-
-### 2. Configure .env 
+### 2. Configure .env
 
 ETH_WS_URL=wss://mainnet.infura.io/ws/v3/your_project_id
 DEST_RPC_URL=https://polygon-rpc.com
@@ -58,19 +58,20 @@ PRIVATE_KEY=
 BRIDGE_CONTRACT=
 DEST_CONTRACT=
 
+### 3. Run Localy
 
-### 3. Run Localy 
 ```bash
 cargo run --release
 
-
+```
 
 ### 4. Or Run with Docker
+
 ```bash
 docker build -t rust-bridge-relayer .
 docker run --rm --env-file .env rust-bridge-relayer
 
-
+```
 
 ## 🧪 Example Use Cases
 
@@ -83,15 +84,16 @@ Enable cross-chain governance voting.
 Custom message passing between dApps on different chains.
 
 ## 🛡️ Security Considerations
+
 Always validate signatures or use trusted validator logic before relaying.
 
 Ensure replay protection is robust (storage layer must persist between restarts).
 
 Monitor gas usage and rate-limit relays when needed.
 
-
 ## 🛣️ Roadmap
- Planned or potential features for future releases:
+
+Planned or potential features for future releases:
 
 ✅ Multisig Validator Support – Verify that a threshold of validators have signed a payload before relaying.
 
@@ -111,12 +113,10 @@ Monitor gas usage and rate-limit relays when needed.
 
 📑 Config File Support – Support .toml/.yaml configuration in addition to .env.
 
-
 ## 🙌 Contributions
+
 PRs and feedback welcome. Please open an issue to suggest features or improvements.
 
+## License
 
-##  License
 MIT or Apache 2.0 — choose what suits your stack.
-
-
