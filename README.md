@@ -51,12 +51,15 @@ cargo build --release
 ```
 
 ### 2. Configure .env
+```bash
 
 ETH_WS_URL=wss://mainnet.infura.io/ws/v3/your_project_id
 DEST_RPC_URL=https://polygon-rpc.com
 PRIVATE_KEY=
 BRIDGE_CONTRACT=
 DEST_CONTRACT=
+
+``` 
 
 ### 3. Run Localy
 
