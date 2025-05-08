@@ -13,7 +13,7 @@ abigen!(
 
 pub async fn listener_for_events(config: &Config, tx: tokio::sync::mpsc::Sender<TokenLockedEvent>) -> anyhow::Result<()> {
   let client = Provider::<Ws>::connect(&config.eth_ws_url).await?;
-  let contract = BridgeContract::new(config.bridge_contract.parse()?, client);
+  let contract = BridgeContract::new(config.bridge_contract.parse()?, client); // this is the contract we are trying to listen for a token lock event 
   let mut stream = contract.token_locked_filter().stream().await?;
 
   while let Some(Ok(event)) = stream.next().await {
