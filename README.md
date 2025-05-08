@@ -1,3 +1,5 @@
+# This project is in an experimental phase and is unsuitable for production deployment.
+
 # 🌉 Rust Bridge Relayer
 
 **Rust Bridge Relayer** is a high-performance, production-ready service for secure and reliable cross-chain communication. Written in [Rust](https://www.rust-lang.org/) for speed and memory safety, it listens to events on a source blockchain and relays validated data to a destination chain.
@@ -51,6 +53,7 @@ cargo build --release
 ```
 
 ### 2. Configure .env
+
 ```bash
 
 ETH_WS_URL=wss://mainnet.infura.io/ws/v3/your_project_id
@@ -59,7 +62,7 @@ PRIVATE_KEY=
 BRIDGE_CONTRACT=
 DEST_CONTRACT=
 
-``` 
+```
 
 ### 3. Run Localy
 
