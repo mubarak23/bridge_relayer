@@ -17,6 +17,10 @@ pub async fn listener_for_events(config: &Config, tx: tokio::sync::mpsc::Sender<
   let mut stream = contract.token_locked_filter().stream().await?;
 
   while let Some(Ok(event)) = stream.next().await {
+     println!(
+        "Sender: {:?}, Amount: {}, Destination: {}, Recipient: {:?}",
+        event.sender.clone(), event.amount.clone(), event.recipient.cone()
+    );
     let data = TokenLockedEvent {
       sender: event.sender,
       amount: event.amount,
