@@ -1,5 +1,3 @@
-# This project is in an experimental phase and is unsuitable for production deployment.
-
 # 🌉 Rust Bridge Relayer
 
 **Rust Bridge Relayer** is a high-performance, production-ready service for secure and reliable cross-chain communication. Written in [Rust](https://www.rust-lang.org/) for speed and memory safety, it listens to events on a source blockchain and relays validated data to a destination chain.
@@ -122,6 +120,8 @@ Planned or potential features for future releases:
 ## 🙌 Contributions
 
 PRs and feedback welcome. Please open an issue to suggest features or improvements.
+
+## This project is in an experimental phase and is unsuitable for production deployment.
 
 ## License
 
